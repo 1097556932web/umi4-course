@@ -1,0 +1,29 @@
+{
+  "name": "umi4-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "umi dev",
+    "build": "cross-env ANALYZE=1 umi build",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "umi": "4.0.0-rc.20"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^12",
+    "@types/jest": "^27",
+    "@types/react": "^18.0.28",
+    "cross-env": "^7.0.3",
+    "jest": "^27",
+    "prettier": "^2",
+    "prettier-plugin-organize-imports": "^2",
+    "prettier-plugin-packagejson": "^2",
+    "ts-node": "^10",
+    "typescript": "^4"
+  }
+}
