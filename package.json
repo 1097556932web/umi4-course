@@ -12,11 +12,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "umi": "4.0.0-rc.20"
+    "@alita/plugins": "^3.2.14",
+    "@ant-design/icons": "4.7.0",
+    "@umijs/plugins": "4.0.0",
+    "antd": "4.21.1",
+    "mockjs": "^1.1.0",
+    "umi": "4.0.0"
   },
   "devDependencies": {
     "@testing-library/react": "^12",
     "@types/jest": "^27",
+    "@types/mockjs": "^1.0.7",
     "@types/react": "^18.0.28",
     "cross-env": "^7.0.3",
     "jest": "^27",

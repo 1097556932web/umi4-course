@@ -6,7 +6,7 @@ import styles from './index.less'
 export default () => {
     const [searchParams, setSearchParams] = useSearchParams();
     const location = useLocation();
-    console.log(location)
+    // console.log(location)
     const a = searchParams.get('a');
     const b = searchParams.get('b');
     return <div className={styles.main}>Index Page

@@ -2,7 +2,7 @@ import React, { useState, createContext, useContext } from "react";
 
 const Context = createContext<any>(null);
 
-const Count = ({}) => {
+const Count = ({ }) => {
   const { useCount } = useContext(Context);
   const [count, setCount] = useCount();
   return <div onClick={() => setCount(count + 1)}>{count}</div>;
