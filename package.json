@@ -5,31 +5,26 @@
   "main": "index.js",
   "scripts": {
     "start": "umi dev",
-    "build": "cross-env ANALYZE=1 umi build",
-    "test": "jest"
+    "openapi": "umi openapi",
+    "build": "cross-env ANALYZE=1 umi build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@alita/plugins": "^3.2.14",
-    "@ant-design/icons": "4.7.0",
+    "@alita/plugins": "^3.0.3",
+    "@ant-design/icons": "^4.7.0",
+    "@umijs/max-plugin-openapi": "^1.0.0",
     "@umijs/plugins": "4.0.0",
-    "antd": "4.21.1",
+    "antd": "^4.21.1",
     "mockjs": "^1.1.0",
+    "swagger-ui-react": "^4.12.0",
     "umi": "4.0.0"
   },
   "devDependencies": {
-    "@testing-library/react": "^12",
-    "@types/jest": "^27",
-    "@types/mockjs": "^1.0.7",
-    "@types/react": "^18.0.28",
+    "@types/mockjs": "^1.0.6",
+    "@types/react": "^18.0.10",
     "cross-env": "^7.0.3",
-    "jest": "^27",
-    "prettier": "^2",
-    "prettier-plugin-organize-imports": "^2",
-    "prettier-plugin-packagejson": "^2",
-    "ts-node": "^10",
     "typescript": "^4"
   }
 }
