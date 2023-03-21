@@ -1,5 +1,5 @@
 // @ts-ignore
-import Waterfall from '@/components/Waterfall'
+import Waterfall from '@/components/Waterfall/waterfall'
 import { Random } from 'mockjs'
 import React, { useMemo, useReducer, useState } from 'react'
 import './waterflowPage.css'

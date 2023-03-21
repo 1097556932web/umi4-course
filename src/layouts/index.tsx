@@ -2,6 +2,7 @@ import {
   PieChartOutlined,
   UserOutlined,
   TableOutlined,
+  MoreOutlined,
 } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import { Breadcrumb, Layout, Menu, Result, Button } from "antd";
@@ -24,6 +25,10 @@ const menuHash: any = {
   listcard: {
     label: "卡片列表",
     icon: <TableOutlined />,
+  },
+  waterflowPage: {
+    label: "瀑布",
+    icon: <MoreOutlined />,
   },
 };
 

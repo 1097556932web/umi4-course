@@ -59,14 +59,16 @@ const Waterfall: FC<Props> = props => {
 
   const insert = (node: ReactElement, img: ImageData) => {
     const col = getLowestCol()
-    col.items.push(node)
-    col.height += img.width
-      ? img.height * (width / img.width) + marginV + extraItemHeight
-      : 0
+    if (col) {
+      col.items.push(node);
+      col.height += img.width
+        ? img.height * (width / img.width) + marginV + extraItemHeight
+        : 0
+    }
     setEnd(n => n + 1)
   }
 
-  const getImgUrl = (node: ReactElement): string => {
+  const getImgUrl = (node: ReactElement): string | null => {
     if (node == null) {
       return null
     }
@@ -109,10 +111,10 @@ const Waterfall: FC<Props> = props => {
     loadingRef.current = true
 
     const queue = new Array<Promise<any>>()
-    const load = (url: string) => {
+    const load = (url: string | null) => {
       return new Promise(resolve => {
         const img = new Image()
-        img.src = url
+        if (url) img.src = url;
         img.onload = () => resolve(img)
         img.onerror = () => resolve(img)
       })
@@ -193,10 +195,10 @@ const Waterfall: FC<Props> = props => {
     >
       {Array.isArray(children)
         ? cols.map((col, i) => (
-            <div key={i} style={{ marginLeft: marginH, width }}>
-              {col.items.map((node, i) => cloneElement(node, i))}
-            </div>
-          ))
+          <div key={i} style={{ marginLeft: marginH, width }}>
+            {col.items.map((node, i) => cloneElement(node, i))}
+          </div>
+        ))
         : children}
     </div>
   )
